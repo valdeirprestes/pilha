@@ -18,15 +18,15 @@ void Listar(){
 	criaPilha(&tmp);
 	do{
 		teste=desempilhaPilha(&p,&dado);
-		if(teste)
+		if(teste){
 			empilhaPilha(&tmp, dado);
+			printf("%d\n", dado);
+		}
 	}while(teste);
 	do{
 		teste=desempilhaPilha(&tmp,&dado);
-		if(teste){
-			printf("%d\n", dado);
+		if(teste)
 			empilhaPilha(&p, dado);
-			}
 	}while(teste);
 }
 void cmd(int op){
